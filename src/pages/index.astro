@@ -1,23 +1,12 @@
 ---
-import "../styles/style.css";
-import Header from "../components/Header.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header/>
+<MainLayout title="Home">
 		<h1>Astro</h1>
 		<Card header="Hej" text="test"/>
 		<Button variant="primary" size="small">TEXT</Button>
 		<Button variant="secondary" size="medium">TEXT</Button>
-	</body>
-</html>
+</MainLayout>

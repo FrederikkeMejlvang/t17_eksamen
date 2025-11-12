@@ -1,8 +1,9 @@
 ---
-const {header, text} = Astro.props;
+const {header, text, newRelease} = Astro.props;
 ---
 
 <article>
     <h2>{header}</h2>
+    {newRelease && <p>NEW RELEASE</p>}
     <p>{text}</p>
 </article>

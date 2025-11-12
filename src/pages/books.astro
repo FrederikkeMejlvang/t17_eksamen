@@ -1,20 +1,8 @@
 ---
-import Header from "../components/Header.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header/>
-		<main>
-            <Card header="Hej" text="test" />
-        </main>
-	</body>
-</html>
+<MainLayout title="Books">
+	<Card header="Titel" text="forfatter" newRelease={true} />
+	<Card header="Titel" text="forfatter"/>
+</MainLayout>
