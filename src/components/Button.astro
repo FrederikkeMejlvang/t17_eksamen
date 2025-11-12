@@ -1,0 +1,22 @@
+---
+const {variant, size} =Astro.props;
+---
+
+<button class={variant + " " + size}>
+    <slot></slot>
+</button>
+
+<style>
+    .primary{
+        background-color: aqua;
+    }
+    .secondary{
+        background-color: bisque;
+    }
+    .small{
+        padding: 1rem;
+    }
+    .medium{
+        padding: 2rem;
+    }
+</style>
