@@ -1,0 +1,87 @@
+html {
+  /* Colors */
+  --green: #1e6023;
+
+  --white: #f8f8f3;
+
+  --brown: #3d2f2f;
+
+  /* Typography */
+  --font-size-h1: 96px;
+  --font-size-h2: 40px;
+  --font-size-h3: 26px;
+  --font-size-p: 20px;
+  --font-size-p-bold: 20px;
+  --font-size-p-small: 16px;
+  --font-size-h1-mobile: 20px;
+  --font-size-h2-mobile: 12px;
+  --font-size-h3-mobil: 12px;
+  --font-size-p-mobile: 12px;
+}
+
+h2 {
+  --font-size-h2: 40px;
+}
+
+p.small {
+  font-size: var(--font-size-p-small);
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+
+p.bold {
+  font-size: var(--font-size-p-bold);
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+body {
+  background: var(--white);
+  color: var(--brown);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 80px;
+}
+.book {
+  padding-right: 40px;
+  padding-left: 40px;
+  border-right: 1px solid var(--brown);
+  box-sizing: border-box;
+}
+
+.books > *:nth-child(4n) .book {
+  border-right: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brown);
+}
+
+a:visited {
+  color: var(--brown);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+hr {
+  margin: none;
+}
+
+.books {
+  margin-left: -40px;
+  margin-right: -40px;
+}

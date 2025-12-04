@@ -2,9 +2,46 @@
 ---
 
 <nav>
-    <a href="/">Home</a>
-    <a href="/listview">Books</a>
-    <a href="/#">Events</a>
+    <ul class="top">
+    <li><a href="/" class="logo">BOOKS & COMPANY</a></li>
+    <li><a href="/" class="search">SEARCH</a></li>
+    </ul>
+    <hr>
+    <ul class="nav">
+    <li><a href="/listview">BOOKS</a></li>
+    <li><a href="/#">MERCH</a></li>
+     <li><a href="/#">COMMUNITY</a></li>
+     <li><a href="/#">SHOPTALK</a></li>
+     <li><a href="/#">ABOUT US</a></li>
+    </ul>
+    <hr>
 </nav>
 
-<style></style>
+<style>
+    ul.nav{
+        font-family: monospace;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .logo{
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search{
+        justify-content: right;
+    }
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+</style>

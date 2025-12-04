@@ -4,11 +4,12 @@ const {data} = Astro.props;
 ---
 
 <a href={`books/${data.slug}`}>
-<article>
+<article class="book">
     <img src={`/images/${data.image}`} alt={data.name}/>
-    <h2>{data.name}</h2>
+    <p class="small">{data.author}</p>
+    <p class="bold">{data.name}</p>
     {newRelease && <p>NEW RELEASE</p>}
-    <p>{data.author}</p>
-    <p>price</p>
+    <p class="small">DKK {data.price},-</p>
 </article>
 </a>
+
