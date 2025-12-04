@@ -50,16 +50,6 @@ img {
 body {
   margin: 80px;
 }
-.book {
-  padding-right: 40px;
-  padding-left: 40px;
-  border-right: 1px solid var(--brown);
-  box-sizing: border-box;
-}
-
-.books > *:nth-child(4n) .book {
-  border-right: none;
-}
 
 a {
   text-decoration: none;
