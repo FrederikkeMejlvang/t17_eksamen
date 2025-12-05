@@ -1,0 +1,38 @@
+---
+import Section_header from "../components/Section_header.astro";
+import Card from "./Card.astro";
+const data = await fetch("https://awvcgdvcnaczmcuxiuia.supabase.co/rest/v1/books", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3dmNnZHZjbmFjem1jdXhpdWlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Mzg3OTAsImV4cCI6MjA3ODUxNDc5MH0.MoWw2g-t4EKxD9j8aywOr7Lm5e3ZlEFJExZ0NTXUXSQ"
+  }
+}).then(res => res.json());
+const book1 = Array.isArray(data) ? data.find(book => book.id === 1) : null;
+const book2 = Array.isArray(data) ? data.find(book => book.id === 2) : null;
+const book3 = Array.isArray(data) ? data.find(book => book.id === 3) : null;
+const book4 = Array.isArray(data) ? data.find(book => book.id === 4) : null;
+---
+
+<article>
+    <Section_header><span slot="title">NEW RELEASES</span>
+  <span slot="button">VIEW ALL</span></Section_header>
+  <div>
+  {book1 && <Card data={book1} />}
+  {book2 && <Card data={book2} />}
+  {book3 && <Card data={book3} />}
+  {book4 && <Card data={book4} />}
+  </div>
+</article>
+
+<style>
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 40px;
+		overflow: hidden;
+    }
+
+article{
+    padding-bottom: 80px;
+}
+</style>

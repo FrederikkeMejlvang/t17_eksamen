@@ -1,0 +1,62 @@
+---
+import Section_header from "../components/Section_header.astro";
+import Button from "./Button.astro";
+---
+
+<article>
+    <Section_header><span slot="title">STAFF FAVORITES</span>
+  <span slot="button">VIEW ALL</span></Section_header>
+  <div class="container">
+    <div class="staff">
+        <a href="/"><div class="item">
+        <img src="../../public/images/thetell.webp" alt="">
+        <p class="bold">AINE</p>
+        </div>
+        </a>
+        <a href="/"><div class="item">
+        <img src="../../public/images/thetell.webp" alt="">
+        <p class="bold">FRANCA</p>
+        </div>
+        </a>
+        <a href="/"><div class="item">
+        <img src="../../public/images/thetell.webp" alt="">
+        <p class="bold">ISABELLA</p>
+        </div>
+        </a>
+        <a href="/"><div class="item">
+        <img src="../../public/images/thetell.webp" alt="">
+        <p class="bold">REBECCA</p>
+        </div>
+        </a>
+        <a href="/"><div class="item">
+        <img src="../../public/images/thetell.webp" alt="">
+        <p class="bold">RIKKE</p>
+        </div>
+        </a>
+</article>
+
+<style>
+ .staff{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+ }
+
+ img{
+  border: 15px solid transparent;
+  border-image: url("../../public/images/frame.svg")5%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+img:hover{
+    border-image: url("../../public/images/frame_hover.svg")5%;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+</style>

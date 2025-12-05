@@ -1,13 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Card from "../components/Card.astro";
-import Button from "../components/Button.astro";
+import Collection from "../components/Collection.astro";
+import Event_collection from "../components/Event_collection.astro";
+import Hero from "../components/Hero.astro";
+import Botw from "../components/Botw.astro";
+import Staff from "../components/Staff.astro";
 ---
 
 <MainLayout title="Home">
-		<Button variant="primary" size="small">TEXT</Button>
-		<Button variant="secondary" size="medium">TEXT</Button>
+		<Hero></Hero>
+		<Collection></Collection>
+		<Event_collection></Event_collection>
+		<Botw></Botw>
+		<Staff></Staff>
 </MainLayout>
-
-
-

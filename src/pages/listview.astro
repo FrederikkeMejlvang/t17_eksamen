@@ -14,17 +14,17 @@ const data = await fetch("https://awvcgdvcnaczmcuxiuia.supabase.co/rest/v1/books
 	<div class="info">
 	<hr class="bold">
 	<p class="long">To reserve a copy of a book, fill out the form and we will get back to you.<br>
-Can’t find the book you’re looking for? Let us know, and we will try our best to track it down. </p>
+Can’t find the book you’re looking for? <a href="/" class="text_link">Let us know</a>, and we will try our best to track it down. </p>
 <hr>
 </div>
 <div class="filter">
-	<Button variant="secondary" >ALL</Button>
-	<Button variant="secondary" >NEW ARRIVALS</Button>
-	<Button variant="secondary" >STAFF FAVORITES</Button>
-	<Button variant="secondary" >FICTION</Button>
-	<Button variant="secondary" >YOUNG ADULT</Button>
-	<Button variant="secondary" >NON FICTION</Button>
-	<Button variant="secondary" >MEMOIRS</Button>
+	<Button variant="b2" >ALL</Button>
+	<Button variant="b2" >NEW ARRIVALS</Button>
+	<Button variant="b2" >STAFF FAVORITES</Button>
+	<Button variant="b2" >FICTION</Button>
+	<Button variant="b2" >YOUNG ADULT</Button>
+	<Button variant="b2" >NON FICTION</Button>
+	<Button variant="b2" >MEMOIRS</Button>
 </div>
 <hr>
 	<section class="books">
@@ -45,10 +45,6 @@ Can’t find the book you’re looking for? Let us know, and we will try our bes
 		overflow: hidden;
 		padding-top: 40px;
     }
-
-	hr.bold{
-  		border-top: 5px solid var(--brown);
-	}
 
 	p.long{
 		text-align: center;

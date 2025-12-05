@@ -13,17 +13,35 @@ const {variant} =Astro.props;
         padding: 0px;
         font-family: "Montserrat";
         font-weight: 600;
+        font-size: 20px;
         cursor: pointer;
     }
-    .primary{
-        color: var(--brown);
+    .b1{
+        color: var(--white);
+        background-color: var(--green);
+        border: 2px solid var(--green);
+        padding: 20px;
     }
-    .secondary{
+
+    .b1:hover{
+        background-color: var(--white);
         color: var(--green);
-        font-size: var(--font-size-p-bold);
+    }
+    .b2{
+        color: var(--green);
         background-color: var(--white);
     }
-    .secondary:hover{
-        text-decoration: underline;
+
+    .b3{
+        color: var(--brown);
+        background-color: var(--white);
     }
+    .b2:hover, .b3:hover{
+        text-decoration: underline;
+        color: var(--green);
+    }
+
+
+
+
 </style>

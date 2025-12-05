@@ -1,5 +1,4 @@
 ---
-const {newRelease} = Astro.props;
 const {data} = Astro.props;
 ---
 
@@ -9,7 +8,6 @@ const {data} = Astro.props;
     <div class="info">
     <p class="small">{data.author}</p>
     <p class="bold">{data.name}</p>
-    {newRelease && <p>NEW RELEASE</p>}
     <p class="small">DKK {data.price},-</p>
     </div>
 </article>

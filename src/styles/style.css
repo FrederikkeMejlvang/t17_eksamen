@@ -5,74 +5,94 @@ html {
   --white: #f8f8f3;
 
   --brown: #3d2f2f;
-
-  /* Typography */
-  --font-size-h1: 96px;
-  --font-size-h2: 40px;
-  --font-size-h3: 26px;
-  --font-size-p: 20px;
-  --font-size-p-bold: 20px;
-  --font-size-p-small: 16px;
-  --font-size-h1-mobile: 20px;
-  --font-size-h2-mobile: 12px;
-  --font-size-h3-mobil: 12px;
-  --font-size-p-mobile: 12px;
 }
 
+/* Typography */
+
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: 96px;
   font-family: "Libre Baskerville";
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 80px;
   margin-bottom: 80px;
 }
 
 h2 {
-  --font-size-h2: 40px;
+  font-size: 40px;
+  font-family: "Libre Baskerville";
+  font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  font-size: 26px;
 }
 
 p {
-  font-size: var(--font-size-p);
+  font-size: 20px;
   font-family: "Montserrat";
   font-weight: 300;
   margin: 0;
 }
 
 p.small {
-  font-size: var(--font-size-p-small);
+  font-size: 16px;
   font-family: "Montserrat";
   text-transform: uppercase;
 }
 
 p.bold {
-  font-size: var(--font-size-p-bold);
+  font-size: 20px;
   font-family: "Montserrat";
   font-weight: 600;
   text-transform: uppercase;
 }
 
+h1.mobile {
+  font-size: 20px;
+}
+
+h2.mobile {
+  font-size: 12px;
+}
+
+h3.mobile {
+  font-size: 12px;
+}
+
+p.mobile {
+  font-size: 12px;
+}
+
+/* Generelt */
+
 body {
   background: var(--white);
   color: var(--brown);
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-body {
   margin: 80px;
 }
+
+/* Links */
 
 a {
   text-decoration: none;
   color: var(--brown);
+  align-self: center;
 }
 
 a:visited {
   color: var(--brown);
+}
+
+a.text_link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+a.text_link:hover {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--green);
 }
 
 ul {
@@ -82,10 +102,20 @@ ul {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 hr {
   border-top: 1px solid var(--brown);
   margin: 0px;
   border-bottom: 0px;
   border-left: 0px;
   border-right: 0px;
+}
+
+hr.bold {
+  border-top: 5px solid var(--brown);
 }

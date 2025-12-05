@@ -1,0 +1,61 @@
+---
+import Section_header from "../components/Section_header.astro";
+import Button from "./Button.astro";
+---
+
+<article>
+    <Section_header><span slot="title">BOOK OF THE WEEK</span>
+  <span slot="button">VIEW ALL</span></Section_header>
+  <div class="container">
+    <div class="book">
+        <a href="/"><img src="../../public/images/thetell.webp" alt=""></a>
+    </div>
+    <div class="info">
+    <div class="text">
+        <h2>THE TELL</h2>
+        <p>BY AMY GREEN</p>
+        <p>In her relentless search for the truth, Griffin probes the pursuit of perfectionism, control, and maintaining appearances that drives so many women.</p>
+    </div>
+    <a href="listview"><Button variant="b1" ><slot name="button">READ THE FULL REVIEW</slot></Button></a>
+    </div>
+  </div>
+</article>
+
+<style>
+.container{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    column-gap: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+article{
+    padding-bottom: 80px;
+}
+
+img{
+  border: 20px solid transparent;
+  border-image: url("../../public/images/frame.svg")5%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+img:hover{
+    border-image: url("../../public/images/frame_hover.svg")5%;
+}
+
+</style>

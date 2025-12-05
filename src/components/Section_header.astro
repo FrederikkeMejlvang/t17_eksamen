@@ -1,0 +1,27 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<article>
+<hr class="bold">
+<div>
+    <h2><slot name="title"></slot></h2>
+    <a href="listview"><Button variant="b2" ><slot name="button"></slot></Button></a>
+</div>
+<hr>
+</article>
+
+<style>
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    h2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    article{
+        padding-bottom: 40px;
+    }
+</style>
