@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
 const data = await fetch("https://awvcgdvcnaczmcuxiuia.supabase.co/rest/v1/books", {
 	method: "GET", 
 	headers: {
@@ -8,21 +9,60 @@ const data = await fetch("https://awvcgdvcnaczmcuxiuia.supabase.co/rest/v1/books
 	}
 }).then((res)=>res.json());
 ---
-<MainLayout title="Books">
+<MainLayout title="books">
+	<h1>BOOKS</h1>
+	<div class="info">
+	<hr class="bold">
+	<p class="long">To reserve a copy of a book, fill out the form and we will get back to you.<br>
+Can’t find the book you’re looking for? Let us know, and we will try our best to track it down. </p>
+<hr>
+</div>
+<div class="filter">
+	<Button variant="secondary" >ALL</Button>
+	<Button variant="secondary" >NEW ARRIVALS</Button>
+	<Button variant="secondary" >STAFF FAVORITES</Button>
+	<Button variant="secondary" >FICTION</Button>
+	<Button variant="secondary" >YOUNG ADULT</Button>
+	<Button variant="secondary" >NON FICTION</Button>
+	<Button variant="secondary" >MEMOIRS</Button>
+</div>
+<hr>
 	<section class="books">
 		{data.map(book=>{
-			return <Card data={book}/>
+				return <Card data={book} />
 		})}
 	</section>
+
 </MainLayout>
 
+
 <style>
-    .books{
+.books{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 0px;
+        column-gap: 40px;
         row-gap: 40px;
 		overflow: hidden;
+		padding-top: 40px;
     }
-	
+
+	hr.bold{
+  		border-top: 5px solid var(--brown);
+	}
+
+	p.long{
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.filter{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+
 </style>

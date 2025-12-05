@@ -19,8 +19,23 @@ html {
   --font-size-p-mobile: 12px;
 }
 
+h1 {
+  font-size: var(--font-size-h1);
+  font-family: "Libre Baskerville";
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 h2 {
   --font-size-h2: 40px;
+}
+
+p {
+  font-size: var(--font-size-p);
+  font-family: "Montserrat";
+  font-weight: 300;
+  margin: 0;
 }
 
 p.small {
@@ -68,10 +83,9 @@ ul {
 }
 
 hr {
-  margin: none;
-}
-
-.books {
-  margin-left: -40px;
-  margin-right: -40px;
+  border-top: 1px solid var(--brown);
+  margin: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
 }

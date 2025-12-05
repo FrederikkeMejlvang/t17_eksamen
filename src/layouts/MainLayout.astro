@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 const {title} = Astro.props
 const data = await fetch("https://awvcgdvcnaczmcuxiuia.supabase.co/rest/v1/books", {
 	method: "GET", 
@@ -25,9 +26,9 @@ console.log(data);
 	</head>
 	<body>
 		<Header/>
-		<h1>{title}</h1>
 		<main>
 			<slot/>
         </main>
+		<Footer/>
 	</body>
 </html>
