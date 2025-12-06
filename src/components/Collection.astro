@@ -35,4 +35,16 @@ const book4 = Array.isArray(data) ? data.find(book => book.id === 4) : null;
 article{
     padding-bottom: 80px;
 }
+@media (max-width: 800px) {
+     div{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+		overflow: hidden;
+    }
+    article{
+    padding-bottom: 40px;
+}
+}
+
 </style>

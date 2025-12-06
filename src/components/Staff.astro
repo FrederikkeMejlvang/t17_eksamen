@@ -37,10 +37,9 @@ import Button from "./Button.astro";
 
 <style>
  .staff{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 40px; 
  }
 
  img{
@@ -58,5 +57,21 @@ img:hover{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+@media (max-width: 800px) {
+     .staff{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; 
+    row-gap: 20px;
+ }
+ .item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    article{
+    padding-bottom: 40px;
+}
 }
 </style>

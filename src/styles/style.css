@@ -48,22 +48,6 @@ p.bold {
   text-transform: uppercase;
 }
 
-h1.mobile {
-  font-size: 20px;
-}
-
-h2.mobile {
-  font-size: 12px;
-}
-
-h3.mobile {
-  font-size: 12px;
-}
-
-p.mobile {
-  font-size: 12px;
-}
-
 /* Generelt */
 
 body {
@@ -80,7 +64,6 @@ body {
 a {
   text-decoration: none;
   color: var(--brown);
-  align-self: center;
 }
 
 a:visited {
@@ -121,4 +104,35 @@ hr {
 
 hr.bold {
   border-top: 5px solid var(--brown);
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  p.small {
+    font-size: 12px;
+  }
+
+  p.bold {
+    font-size: 14px;
+  }
 }

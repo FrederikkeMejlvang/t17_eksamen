@@ -44,6 +44,7 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
         row-gap: 40px;
 		overflow: hidden;
 		padding-top: 40px;
+		align-items: start;
     }
 
 	p.long{
@@ -59,6 +60,21 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-
-
+@media (max-width: 800px) {
+     .books{
+		display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+		padding-top: 20px;
+    }
+	p.long{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.filter{
+		padding-top: 10px;
+		padding-bottom: 10px;
+    }
+}
 </style>
