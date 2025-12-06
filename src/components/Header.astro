@@ -1,47 +1,44 @@
 ---
+import Button from "./Button.astro"
 ---
 
 <nav>
     <ul class="top">
-    <li><a href="/" class="logo">BOOKS & COMPANY</a></li>
-    <li><a href="/" class="search">SEARCH</a></li>
+    <li class="logo"><h2><a href="/" >BOOKS & COMPANY</a></li></h2>
+    <li class="search"><a href="/" ><Button variant="b3" ><slot name="button"></slot>SEARCH</Button></a></li>
     </ul>
     <hr>
     <ul class="nav">
-    <li><a href="/listview">BOOKS</a></li>
-    <li><a href="/#">MERCH</a></li>
-     <li><a href="/#">COMMUNITY</a></li>
-     <li><a href="/#">SHOPTALK</a></li>
-     <li><a href="/#">ABOUT US</a></li>
+    <li><a href="listview"><Button variant="b3" ><slot name="button"></slot>BOOKS</Button></a></li>
+    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>MERCH</Button></a></li>
+    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>COMMUNITY</Button></a></li>
+    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>SHOPTALK</Button></a></li>
+    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>ABOUT US</Button></a></li>
     </ul>
     <hr>
 </nav>
 
 <style>
-    ul.nav{
-        font-family: monospace;
-        font-size: 20px;
-        font-weight: 600;
-        padding-top: 20px;
-        padding-bottom: 20px;
+
+    ul{
         padding-left: 0px;
         padding-right: 0px;
     }
+    ul.nav{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
     .logo{
-        font-size: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-self: center;
     }
-
     .search{
-        justify-content: right;
+        justify-self: end;
     }
     .top{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-bottom: 40px;
     }
 </style>
