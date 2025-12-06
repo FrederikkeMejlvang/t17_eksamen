@@ -1,32 +1,30 @@
 ---
 import Button from "./Button.astro"
+import Nav from "./Nav.astro"
 ---
 
-<nav>
+<header>
+<div class="navbar">
     <ul class="top">
-    <li class="logo"><h2><a href="/" >BOOKS & COMPANY</a></li></h2>
+    <li class="logo"><h2><a href="/" >BOOKS & COMPANY</a></h2></li>
     <li class="search"><a href="/" ><Button variant="b3" ><slot name="button"></slot>SEARCH</Button></a></li>
     </ul>
+    <hr class="top-bar">
+<Nav></Nav>
     <hr>
-    <ul class="nav">
-    <li><a href="listview"><Button variant="b3" ><slot name="button"></slot>BOOKS</Button></a></li>
-    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>MERCH</Button></a></li>
-    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>COMMUNITY</Button></a></li>
-    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>SHOPTALK</Button></a></li>
-    <li><a href="/#"><Button variant="b3" ><slot name="button"></slot>ABOUT US</Button></a></li>
-    </ul>
-    <hr>
-</nav>
+</div>
+</header>
 
 <style>
 
+    header{
+        position: sticky;
+  top: 0;
+  background-color: var(--white);
+    }
     ul{
         padding-left: 0px;
         padding-right: 0px;
-    }
-    ul.nav{
-        padding-top: 20px;
-        padding-bottom: 20px;
     }
 
     .logo{
@@ -42,13 +40,14 @@ import Button from "./Button.astro"
     padding-bottom: 40px;
     }
 
-    @media (max-width: 800px) {
-     ul.nav{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .top{
+    @media(max-width:800px){
+        .top{
     padding-bottom: 20px;
+    display: none;
     }
-}
+    .top-bar{
+        display: none;
+    }
+    }
+
 </style>

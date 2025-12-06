@@ -1,0 +1,157 @@
+
+<nav class="nav-bar">
+    <a href="/" class="logo">BOOKS & COMPANY</a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="/listview" class="nav-link">BOOKS</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">MERCH</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">COMMUNITY</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">SHOPTALK</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">ABOUT US</a>
+        </li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    .nav-link{
+        color: var(--brown);
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .logo{
+        display: none;
+    color: var(--brown);
+    font-family: "Libre Baskerville";
+    font-weight: 600;
+    font-size: 20px;
+    }
+
+    nav{
+        padding: 20px 0px;
+    }
+
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-link:hover{
+        color: var(--green);
+        text-decoration: underline;
+    }
+
+    .hamburger{
+        display: none;
+        cursor: pointer;
+        justify-self: end;
+    }
+
+    .bar{
+        display: block;
+        width: 18px;
+        height: 2px;
+        border-radius: 10px;
+        margin: 3px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--brown);
+    }
+
+    @media(max-width:800px){
+
+        .hamburger{
+            display: block;
+        }
+        .hamburger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(1){
+            transform: translateY(5px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(3){
+            transform: translateY(-5px) rotate(-45deg);
+        }
+
+        .nav-menu{
+            position: fixed;
+            left: -100%;
+            gap: 0;
+            flex-direction: column;
+            background-color: var(--brown);
+            width: 100%;
+            transition: 0.3s;
+            padding: 60px 40px 40px 40px;
+            margin-top: -40px;
+        }
+
+        .logo{
+            display: block;
+        }
+
+        .nav-bar{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-item{
+            padding: 20px 20px;
+            border-bottom: 1px solid var(--white);
+        }
+
+         .nav-item:last-child{
+            border-bottom: 0px;
+         }
+
+        .nav-menu.active{
+            left: 0;
+        }
+        .bar.active{
+        background-color: var(--white);
+    }
+
+    .nav-link{
+        color: var(--white);
+    }
+    }
+
+</style>
+
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const bar1 = document.querySelector(".bar:nth-child(1)");
+    const bar3 = document.querySelector(".bar:nth-child(3)");
+
+    hamburger?.addEventListener("click", () => {
+    hamburger?.classList.toggle("active");
+    navMenu?.classList.toggle("active");
+    bar1?.classList.toggle("active");
+    bar3?.classList.toggle("active");
+    })
+    
+</script>
