@@ -2,7 +2,7 @@
 const {data} = Astro.props;
 ---
 
-<a href={`books/${data.slug}`}>
+<a href={`/books/${data.slug}`}>
 <article class="book">
     <img src={`/images/${data.image}`} alt={data.name}/>
     <div class="info">
