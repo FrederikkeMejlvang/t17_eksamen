@@ -9,27 +9,31 @@ import Button from "./Button.astro";
   <div class="container">
     <div class="staff">
         <a href="/listview"><div class="item">
-        <img src="images/aine.webp" alt="">
+        <img src="images/aine.webp" alt="" class="pic">
         <p class="bold">ÁINE</p>
         </div>
         </a>
+        <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line1"/>
         <a href="/listview"><div class="item">
-        <img src="images/franca.webp" alt="">
+        <img src="images/franca.webp" alt="" class="pic">
         <p class="bold">FRANCA</p>
         </div>
         </a>
+        <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line2"/>
         <a href="/listview"><div class="item">
-        <img src="images/isabella.webp" alt="">
+        <img src="images/isabella.webp" alt="" class="pic">
         <p class="bold">ISABELLA</p>
         </div>
         </a>
+        <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line3"/>
         <a href="/listview"><div class="item">
-        <img src="images/rebecca.webp" alt="">
+        <img src="images/rebecca.webp" alt="" class="pic">
         <p class="bold">REBECCA</p>
         </div>
         </a>
+        <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line4"/>
         <a href="/listview"><div class="item">
-        <img src="images/rikke.webp" alt="">
+        <img src="images/rikke.webp" alt="" class="pic">
         <p class="bold">RIKKE</p>
         </div>
         </a>
@@ -38,18 +42,18 @@ import Button from "./Button.astro";
 <style>
  .staff{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
     column-gap: 40px; 
  }
 
- img{
+ img.pic{
   border: 15px solid transparent;
   border-image: url("/images/frame.svg")5%;
   padding: 2px;
   box-sizing: border-box;
 }
 
-img:hover{
+img.pic:hover{
     border-image: url("/images/frame_hover.svg")5%;
 }
 
@@ -59,9 +63,13 @@ img:hover{
     gap: 20px;
 }
 
+.item:hover{
+        color: var(--green);
+        text-decoration: underline;
+    }
 @media (max-width: 800px) {
      .staff{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     column-gap: 20px; 
     row-gap: 20px;
  }
@@ -72,6 +80,10 @@ img:hover{
 }
     article{
     padding-bottom: 40px;
+}
+
+.line2, .line4{
+    display: none;
 }
 }
 @media (min-width: 800px) and (max-width: 1000px) {

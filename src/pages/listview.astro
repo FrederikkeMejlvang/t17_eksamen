@@ -26,6 +26,9 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 	<Button variant="b2" >NON FICTION</Button>
 	<Button variant="b2" >MEMOIRS</Button>
 </div>
+<div class="filter-btn">
+<Button variant="b2">FILTERS<i class="fa-solid fa-angle-down" style="font-size:var(--icons);"></i></Button>
+</div>
 <hr>
 	<section class="books">
 		{data.map(book=>{
@@ -46,7 +49,6 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 		padding-top: 40px;
 		align-items: start;
     }
-
 	p.long{
 		text-align: center;
 		padding-top: 20px;
@@ -60,6 +62,13 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
+
+	.filter-btn{
+        display: none;
+        cursor: pointer;
+        align-self: center;
+    }
+
 @media (max-width: 800px) {
      .books{
         grid-template-columns: 1fr 1fr;
@@ -71,10 +80,7 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	.filter{
-		padding-top: 10px;
-		padding-bottom: 10px;
-    }
+
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
@@ -82,5 +88,15 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
         column-gap: 20px;
 		row-gap: 20px;
     }
+}
+
+@media (max-width: 1000px) {
+.filter{
+		display: none;
+	}
+	.filter-btn{
+            display: block;
+			padding: 10px 0px;
+        }
 }
 </style>

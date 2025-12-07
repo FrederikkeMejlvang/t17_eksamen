@@ -18,8 +18,11 @@ const book4 = Array.isArray(data) ? data.find(book => book.id === 4) : null;
   <span slot="button">VIEW ALL</span></Section_header>
   <div>
   {book1 && <Card data={book1} />}
+  <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line1"/>
   {book2 && <Card data={book2} />}
+  <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);" class="line2"/>
   {book3 && <Card data={book3} />}
+  <img src="" alt="|" style="width:1px; height:100%; background: var(--brown);"class="line3" />
   {book4 && <Card data={book4} />}
   </div>
 </article>
@@ -27,9 +30,9 @@ const book4 = Array.isArray(data) ? data.find(book => book.id === 4) : null;
 <style>
     div{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
         column-gap: 40px;
-		overflow: hidden;
+		  overflow: hidden;
     }
 
 article{
@@ -37,9 +40,12 @@ article{
 }
 @media (max-width: 800px) {
      div{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr auto 1fr;
         column-gap: 20px;
         row-gap: 20px;
+     }
+    .line2{
+      display: none;
     }
     article{
     padding-bottom: 40px;
