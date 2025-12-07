@@ -71,8 +71,8 @@
 
     .bar{
         display: block;
-        width: 18px;
-        height: 2px;
+        width: 21px;
+        height: 3px;
         border-radius: 10px;
         margin: 3px auto;
         -webkit-transition: all 0.3s ease-in-out;
@@ -107,13 +107,16 @@
             margin-top: -40px;
         }
 
-        .logo{
-            display: block;
+        .nav-bar{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
         }
 
-        .nav-bar{
-            display: flex;
-            justify-content: space-between;
+        .logo{
+            display: block;
+            justify-self: center;
+            padding-left: 21px;
         }
 
         .nav-item{
