@@ -140,6 +140,9 @@ i {
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
+  body {
+    margin: 40px;
+  }
   h1 {
     font-size: 56px;
   }
