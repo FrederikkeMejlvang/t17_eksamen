@@ -62,7 +62,6 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 	}
 @media (max-width: 800px) {
      .books{
-		display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
         row-gap: 20px;
@@ -75,6 +74,13 @@ Can’t find the book you’re looking for? <a href="/" class="text_link">Let us
 	.filter{
 		padding-top: 10px;
 		padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  
+	.books{
+        column-gap: 20px;
     }
 }
 </style>
