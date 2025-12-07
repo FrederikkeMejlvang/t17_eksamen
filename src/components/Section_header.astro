@@ -6,7 +6,7 @@ import Button from "../components/Button.astro";
 <hr class="bold">
 <div>
     <h2><slot name="title"></slot></h2>
-    <a href="listview"><Button variant="b2" ><slot name="button"></slot></Button></a>
+    <a href="listview"><Button variant="b2" ><slot name="button"></slot></Button><i class="fa-solid fa-angle-right" style="font-size:20px;color: var(--green);"></i></a>
 </div>
 <hr>
 </article>
@@ -28,7 +28,6 @@ import Button from "../components/Button.astro";
     a{
         align-self: center;
     }
-
     @media (max-width: 1000px) {
      h2{
         padding-top: 10px;

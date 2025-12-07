@@ -106,6 +106,10 @@ hr.bold {
   border-top: 5px solid var(--brown);
 }
 
+i {
+  padding-left: 10px;
+}
+
 @media (max-width: 800px) {
   body {
     margin: 20px;
