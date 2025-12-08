@@ -1,4 +1,6 @@
 ---
+import Button from '../../components/Button.astro';
+import Collection from '../../components/Collection.astro';
 import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
@@ -23,6 +25,76 @@ const {myData} = Astro.props;
 ---
 
 <MainLayout title={myData["name"]}>
+  <ul class="breadcrumbs">
+  <li><a href="/listview"><Button variant="b3" ><slot name="button">BOOKS</slot></Button></a></li>
+  <li><p>|</p></li>
+  <li><p>{myData["name"]}</p></li>
+  </ul>
+    <div class="book-info">
+      <div class="book">
+      <img src={`/images/${myData["image"]}`} alt={myData["name"]}/>
+      </div>
+      <div class="right">
+  <div class="text">
+    <p class="author">{myData["author"]}</p>
     <h2>{myData["name"]}</h2>
+    <p>DKK {myData["price"]},-</p>
     <p>{myData["description"]}</p>
+  </div>
+    <Button variant="b1" ><slot name="button">RESERVE COPY</slot></Button>
+    </div>
+    </div>
+    <Collection></Collection>
 </MainLayout>
+
+<style>
+
+  .breadcrumbs{
+    padding: 40px 0px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .book-info{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 40px;
+    padding-bottom: 80px;
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .author, h2{
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .book-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  .book{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .text{
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  .breadcrumbs{
+    padding: 20px 0px;
+  }
+  }
+  @media (min-width: 800px) and (max-width: 1000px) {
+  .text{
+    gap: 20px;
+  }
+  }
+</style>
