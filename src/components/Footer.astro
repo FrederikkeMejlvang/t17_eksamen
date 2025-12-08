@@ -1,11 +1,139 @@
-<div class="footer">
-<h1>Footer</h1>
-</div>
+<footer>
+    <div class="all">
+        <div class="header">
+    <p class="logo">BOOKS & COMPANY</p>
+    <hr>
+    </div>
+    <div class="text">
+        <div class="info">
+           <p class="bold">INFO</p> 
+           <p>SOFIEVEJ 1 <br> 2900 HELLERUP, DENMARK</p>
+           <p>MAIL: INFO@BOOKSANDCOMPANY.DK</p>
+           <p>PHONE: +45 50 34 75 57</p>
+        </div>
+        <div class="hours">
+            <p class="bold">OPENING hours</p>
+            <p>MONDAY TO FRIDAY: 8:30 - 17:30</p>
+            <p>SATURDAY & SUNDAY: 10:00 - 15:00</p>
+        </div>
+        <div class="socials">
+            <p class="bold">SOCIALS</p>
+            <a href="https://www.instagram.com/booksandcompanydk/" target="_blank">
+                <div class="some">
+            <img src="images/instagram.webp" alt="">
+            <p>INSTAGRAM</p>
+            </div>  
+            </a>
+            <a href="">
+            <div class="some">
+            <img src="images/newsletter.webp" alt="">
+            <p>NEWSLETTER</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</footer>
 
 <style>
-    .footer{
-    background: var(--white);
-    color: var(--green);
-    margin: 0px;
+    footer{
+    background: var(--brown);
+    color: var(--white);
+    padding: 80px;
     }
+    .logo{
+    font-family: "Libre Baskerville";
+    font-weight: 600;
+    font-size: 20px;
+    }
+a{
+color: var(--white);
+}
+
+a:hover{
+text-decoration: underline;
+}
+a:visited {
+  color: var(--white);
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    .text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info, .hours, .socials{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    hr{
+        border-top: 1px solid var(--white);
+    }
+
+    .some{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    img{
+        height: 50px;
+        width: auto;
+    }
+
+    @media (max-width: 800px) {
+    footer{
+    padding: 40px 20px;
+    }
+    .all{
+    gap: 20px
+}
+    .text{
+        gap: 20px;
+    }
+
+    .info, .hours, .socials{
+        gap: 10px;
+    }
+    .logo{
+    font-size: 14px;
+    }
+    img{
+        height: 25px;
+        width: auto;
+    }
+    }
+
+     @media (max-width: 1000px) {
+        .text{
+        flex-direction: column;
+    }
+     }
+
+     @media (min-width: 800px) and (max-width: 1000px) {
+        .text{
+        gap: 40px;
+    }
+    footer{
+    padding: 40px 40px;
+    }
+    img{
+        height: 35px;
+        width: auto;
+    }
+     }
 </style>

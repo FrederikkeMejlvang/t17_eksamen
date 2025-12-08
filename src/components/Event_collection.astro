@@ -6,10 +6,51 @@ import Event_card from "./Event_card.astro";
 <article>
     <Section_header><span slot="title">UPCOMING EVENTS</span>
   <span slot="button">VIEW ALL</span></Section_header>
+  <div>
+    <a href="">
+  <Event_card><span slot="type">AUTHOR SIGNING</span>
+  <span slot="title">AMY GRIFFIN VISITS BOOKS & COMPANY</span>
+  <span slot="date">DECEMBER 16TH - 3PM  TO 5PM</span>
+<span slot="description">Amy griffin will be visiting our shop and do a short reading of her new book “The Tell”. Bring your own copy or buy one at the shop to get signed.</span>
+<span slot="img"><img src="images/book.webp" alt="book illustration"></span></Event_card>
+</a>
+<hr>
+<a href="">
+  <Event_card><span slot="type">WORKSHOP</span>
+  <span slot="title">LETTER WRITING WORKSHOP</span>
+  <span slot="date">JANUARY 3RD - 5PM  TO 7PM</span>
+<span slot="description">Want to start writing more letters? Then this is the workshop for you. Come by and get tips and tricks on how to incorporate letter writing into your routine.</span>
+<span slot="img"><img src="images/letters.webp" alt="letter illustration"></span></Event_card>
+</a>
+<hr>
+<a href="">
+  <Event_card><span slot="type">LIVE PODCAST</span>
+  <span slot="title">LIVE PODCAST RECORDING OF “BOOK IMPRINT”</span>
+  <span slot="date">JANUARY 15TH - 6PM  TO 8PM </span>
+<span slot="description">“Book Imprint” is created and hosted by Rebecca Thandi Norman. This weeks guest will be award winning danish poet and author Asta Olivia Nordenhof.</span>
+<span slot="img"><img src="images/paper.webp" alt="letter illustration"></span></Event_card>
+</a>
+<hr>
+</div>
 </article>
 
 <style>
 article{
     padding-bottom: 80px;
 }
+
+div{
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 40px;
+}
+
+   @media (max-width: 800px) {
+    div{
+      row-gap: 10px;
+    }
+    article{
+    padding-bottom: 40px;
+}
+   }
 </style>

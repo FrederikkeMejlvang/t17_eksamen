@@ -28,6 +28,7 @@ h2 {
 
 h3 {
   font-size: 26px;
+  margin: 0px;
 }
 
 p {
@@ -55,6 +56,10 @@ p.bold {
 body {
   background: var(--white);
   color: var(--brown);
+  margin: 0px;
+}
+
+main {
   margin-left: 80px;
   margin-right: 80px;
 }
@@ -114,7 +119,7 @@ i {
   html {
     --icons: 12px;
   }
-  body {
+  main {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -129,7 +134,7 @@ i {
   }
 
   h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   p {
@@ -146,7 +151,7 @@ i {
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
-  body {
+  main {
     margin-left: 40px;
     margin-right: 40px;
   }
@@ -155,6 +160,10 @@ i {
   }
   h2 {
     font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
   }
   p {
     font-size: 16px;

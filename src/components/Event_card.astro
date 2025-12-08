@@ -1,0 +1,75 @@
+---
+import Button from "./Button.astro"
+---
+
+<article>
+    <div class="left">
+        <div class="text">
+        <p><slot name="type"></slot></p>
+        <h3><slot name="title"></slot></h3>
+        <p class="date"><slot name="date"></slot></p>
+        <p class="des"><slot name="description"></slot></p>
+    </div>
+    <div class="more">
+    <Button variant="b1">MORE INFO</Button>
+    </div>
+    </div>
+    <div class="right">
+    <slot name="img"></slot>
+    </div>
+</article>
+
+<style>
+    article{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 40px;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .right{
+        align-self: center;
+    }
+
+    .date{
+        font-weight: 600;
+    }
+
+    @media (max-width: 800px) {
+        .des{
+            display: none;
+        }
+        .more{
+            display: none;
+        }
+        article{
+        grid-template-columns: 3fr 1fr;
+        column-gap: 20px;
+    }
+    .date{
+        font-weight: 300;
+    }
+
+    .text{
+        gap: 6px;
+        padding-bottom: 10px;
+    }
+}
+    @media (min-width: 800px) and (max-width: 1000px) {
+
+        article{
+        column-gap: 20px;
+    }
+       .text{
+        gap: 12px;
+        padding-bottom: 20px;
+    } 
+    }
+
+</style>
