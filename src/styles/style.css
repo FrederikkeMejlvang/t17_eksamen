@@ -148,31 +148,31 @@ i {
   p.bold {
     font-size: 14px;
   }
-}
 
-@media (min-width: 800px) and (max-width: 1000px) {
-  main {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  h1 {
-    font-size: 56px;
-  }
-  h2 {
-    font-size: 32px;
-  }
+  @media (min-width: 800px) and (max-width: 1000px) {
+    main {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    h1 {
+      font-size: 56px;
+    }
+    h2 {
+      font-size: 32px;
+    }
 
-  h3 {
-    font-size: 26px;
-  }
-  p {
-    font-size: 16px;
-  }
-  p.small {
-    font-size: 14px;
-  }
+    h3 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 16px;
+    }
+    p.small {
+      font-size: 14px;
+    }
 
-  p.bold {
-    font-size: 16px;
+    p.bold {
+      font-size: 16px;
+    }
   }
 }
