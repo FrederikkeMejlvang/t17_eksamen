@@ -1,21 +1,23 @@
-
+---
+const currentPath = Astro.url.pathname;
+---
 <nav class="nav-bar">
     <a href="/" class="logo">BOOKS & COMPANY</a>
     <ul class="nav-menu">
         <li class="nav-item">
-            <a href="/listview" class="nav-link">BOOKS</a>
+            <a href="/listview" class={`nav-link ${currentPath === '/listview' ? 'active' : ''}`}>BOOKS</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">MERCH</a>
+            <a href="#" class={`nav-link ${currentPath === '/merch' ? 'active' : ''}`}>MERCH</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:18px;"></i></a>
+            <a href="#" class={`nav-link ${currentPath === '/community' ? 'active' : ''}`}>COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:18px;"></i></a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">SHOPTALK</a>
+            <a href="#" class={`nav-link ${currentPath === '/shoptalk' ? 'active' : ''}`}>SHOPTALK</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">ABOUT US</a>
+            <a href="#" class={`nav-link ${currentPath === '/aboutus' ? 'active' : ''}`}>ABOUT US</a>
         </li>
     </ul>
     <div class="hamburger">
@@ -51,7 +53,7 @@
 
     nav{
         padding: 20px 0px;
-        transition:padding 0.8s ease;
+        transition:padding 0.7s ease;
     }
 
     .nav-menu{
