@@ -6,7 +6,7 @@ import Nav from "./Nav.astro"
 <header>
 <div class="navbar">
     <ul class="top">
-    <li class="logo"><h2><a href="/" >BOOKS & COMPANY</a></h2></li>
+    <li class="logo"><h2 class="logo_text"><a href="/" >BOOKS & COMPANY</a></h2></li>
     <li class="search"><a href="/" ><Button variant="b3" ><slot name="button"></slot>SEARCH<i class="fa-solid fa-magnifying-glass"></i></i></Button></a></li>
     </ul>
     <hr class="top-bar">
@@ -34,6 +34,10 @@ import Nav from "./Nav.astro"
         justify-self: center;
         padding-left: 86px;
     }
+
+    .logo_text {
+    transition: font-size 0.5s ease-in-out;
+}
     .search{
         justify-self: end;
     }
@@ -46,9 +50,9 @@ import Nav from "./Nav.astro"
 
     @media(max-width:800px){
         header{
-        padding-top: 0px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 0px; 
+        padding-left: 20px; 
+        padding-right: 20px; 
     }
         .top{
         padding-bottom: 20px;
@@ -67,3 +71,27 @@ import Nav from "./Nav.astro"
     }
 
 </style>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+const top = document.querySelector(".top") as HTMLElement;
+const logo = document.querySelector(".logo_text") as HTMLElement;
+const header = document.querySelector("header") as HTMLElement;
+const nav = document.querySelector("nav") as HTMLElement;
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    top.style.paddingBottom = "20px";
+    header.style.paddingTop = "20px";
+    logo.style.fontSize = "20px";
+    nav.style.padding = "10px 0px";
+  } else {
+    top.style.paddingBottom = "40px";
+    logo.style.fontSize = "40px";
+    header.style.paddingTop = "40px";
+    nav.style.padding = "20px 0px";
+  }
+}
+
+</script>

@@ -6,7 +6,7 @@ html {
 
   --brown: #3d2f2f;
 
-  --icons: 20px;
+  --icons: 18px;
 }
 
 /* Typography */
@@ -32,20 +32,20 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Montserrat";
   font-weight: 300;
   margin: 0;
 }
 
 p.small {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Montserrat";
   text-transform: uppercase;
 }
 
 p.bold {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Montserrat";
   font-weight: 600;
   text-transform: uppercase;
@@ -124,13 +124,13 @@ i {
     margin-right: 20px;
   }
   h1 {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h3 {
@@ -148,31 +148,31 @@ i {
   p.bold {
     font-size: 14px;
   }
+}
 
-  @media (min-width: 800px) and (max-width: 1000px) {
-    main {
-      margin-left: 40px;
-      margin-right: 40px;
-    }
-    h1 {
-      font-size: 56px;
-    }
-    h2 {
-      font-size: 32px;
-    }
+@media (min-width: 800px) and (max-width: 1000px) {
+  main {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 
-    h3 {
-      font-size: 26px;
-    }
-    p {
-      font-size: 16px;
-    }
-    p.small {
-      font-size: 14px;
-    }
+  h3 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px;
+  }
+  p.small {
+    font-size: 14px;
+  }
 
-    p.bold {
-      font-size: 16px;
-    }
+  p.bold {
+    font-size: 16px;
   }
 }

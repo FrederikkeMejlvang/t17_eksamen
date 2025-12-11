@@ -9,7 +9,7 @@
             <a href="#" class="nav-link">MERCH</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:20px;"></i></a>
+            <a href="#" class="nav-link">COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:18px;"></i></a>
         </li>
         <li class="nav-item">
             <a href="#" class="nav-link">SHOPTALK</a>
@@ -37,7 +37,7 @@
     .nav-link{
         color: var(--brown);
         font-family: "Montserrat";
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
     }
 
@@ -46,7 +46,7 @@
     color: var(--brown);
     font-family: "Libre Baskerville";
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     }
 
     nav{
@@ -62,6 +62,11 @@
         color: var(--green);
         text-decoration: underline;
     }
+
+.active {
+  color: var(--green);
+
+}
 
     .hamburger{
         display: none;
@@ -155,12 +160,11 @@
     const navMenu = document.querySelector(".nav-menu");
     const bar1 = document.querySelector(".bar:nth-child(1)");
     const bar3 = document.querySelector(".bar:nth-child(3)");
-
+    
     hamburger?.addEventListener("click", () => {
     hamburger?.classList.toggle("active");
     navMenu?.classList.toggle("active");
     bar1?.classList.toggle("active");
     bar3?.classList.toggle("active");
     })
-    
 </script>
