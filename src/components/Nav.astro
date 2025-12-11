@@ -1,23 +1,21 @@
----
-const currentPath = Astro.url.pathname;
----
+
 <nav class="nav-bar">
     <a href="/" class="logo">BOOKS & COMPANY</a>
     <ul class="nav-menu">
         <li class="nav-item">
-            <a href="/listview" class={`nav-link ${currentPath === '/listview' ? 'active' : ''}`}>BOOKS</a>
+            <a href="/listview" class="nav-link" data-path="/listview">BOOKS</a>
         </li>
         <li class="nav-item">
-            <a href="#" class={`nav-link ${currentPath === '/merch' ? 'active' : ''}`}>MERCH</a>
+            <a href="#" class="nav-link" data-path="/merch">MERCH</a>
         </li>
         <li class="nav-item">
-            <a href="#" class={`nav-link ${currentPath === '/community' ? 'active' : ''}`}>COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:18px;"></i></a>
+            <a href="#" class="nav-link" data-path="/community">COMMUNITY<i class="fa-solid fa-angle-down" style="font-size:18px;"></i></a>
         </li>
         <li class="nav-item">
-            <a href="#" class={`nav-link ${currentPath === '/shoptalk' ? 'active' : ''}`}>SHOPTALK</a>
+            <a href="#" class="nav-link" data-path="/shoptalk">SHOPTALK</a>
         </li>
         <li class="nav-item">
-            <a href="#" class={`nav-link ${currentPath === '/aboutus' ? 'active' : ''}`}>ABOUT US</a>
+            <a href="#" class="nav-link" data-path="/about">ABOUT US</a>
         </li>
     </ul>
     <div class="hamburger">
@@ -170,4 +168,21 @@ const currentPath = Astro.url.pathname;
     bar1?.classList.toggle("active");
     bar3?.classList.toggle("active");
     })
+
+
+function setActiveNavLink() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-link[data-path]');
+  
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('data-path');
+    if (currentPath === linkPath || currentPath.startsWith(linkPath + '/')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+setActiveNavLink();
 </script>
