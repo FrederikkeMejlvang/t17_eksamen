@@ -7,7 +7,7 @@ import Nav from "./Nav.astro"
 <div class="navbar">
     <ul class="top">
     <li class="logo"><h2 class="logo_text"><a href="/" >BOOKS & COMPANY</a></h2></li>
-    <li class="search"><a href="/" ><Button variant="b3" ><slot name="button"></slot>SEARCH<i class="fa-solid fa-magnifying-glass"></i></i></Button></a></li>
+    <li class="search"><a href="/" ><Button variant="b3" ><slot name="button"></slot><i class="fa-solid fa-magnifying-glass"></i>SEARCH</Button></a></li>
     </ul>
     <hr class="top-bar">
 <Nav></Nav>
@@ -33,7 +33,7 @@ import Nav from "./Nav.astro"
 
     .logo{
         justify-self: center;
-        padding-left: 86px;
+        padding-left: 95px;
     }
 
     .logo_text {
@@ -41,6 +41,12 @@ import Nav from "./Nav.astro"
 }
     .search{
         justify-self: end;
+        padding-right: 20px;
+    }
+
+    i{
+        padding-right: 10px;
+        padding-left: 0px;
     }
     .top{
     display: grid;
